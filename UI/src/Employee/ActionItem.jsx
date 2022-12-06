@@ -20,7 +20,7 @@ export default class ActionItem extends Component {
   }
 
   componentDidMount() {
-    fetch("http://127.0.0.1:3010/specificApplication", {
+    fetch(`${url}/specificApplication`, {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -142,7 +142,7 @@ export default class ActionItem extends Component {
                     this.state.empForm.length != 0 &&
                     this.state.advForm.length != 0
                   ) {
-                    fetch(`http://127.0.0.1:3010/updateApplicationStatus`, {
+                    fetch(`${url}/updateApplicationStatus`, {
                       headers: {
                         "Content-Type": "application/json",
                         Accept: "application/json",

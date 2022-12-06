@@ -5,6 +5,7 @@ import React, { useState, Component } from "react";
 import Head from "./Head";
 //import ProfileName from './components/Profile'
 //import { BrowserRouter as Routes, Route } from 'react-router-dom'
+import url from "../url";
 
 export default class CPTApplication extends Component {
   constructor(props) {
@@ -76,7 +77,7 @@ export default class CPTApplication extends Component {
   }
   
   componentDidMount() {
-    fetch("http://127.0.0.1:3010/userData", {
+    fetch(`${url}/userData`, {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -131,7 +132,7 @@ export default class CPTApplication extends Component {
                   console.log("Emp File:", this.state.empFormData)
                   console.log("ADV File", this.state.advFormData)
                   if (this.state.empData.length != 0 && this.state.advData.length != 0) {
-                    fetch(`http://127.0.0.1:3010/initiateApplication`, {
+                    fetch(`${url}/initiateApplication`, {
                       headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'

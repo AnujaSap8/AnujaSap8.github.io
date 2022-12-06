@@ -10,6 +10,7 @@ import Base64Downloader from 'common-base64-downloader-react';
 //import errorBondary from '../components/Error';
 //import Col from 'react-bootstrap/Col';
 //import Row from 'react-bootstrap/Row';
+import url from '../url';
 
 export default class PostTitles extends Component {
 
@@ -34,7 +35,7 @@ export default class PostTitles extends Component {
   }
 
   componentDidMount() {
-    fetch("http://127.0.0.1:3010/applicationData", {
+    fetch(`${url}/applicationData`, {
       method: "POST",
       crossDomain: true,
       headers: {

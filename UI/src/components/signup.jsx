@@ -34,7 +34,7 @@ export default class SignUp extends Component {
     e.preventDefault();
     const { uid, firstName, middleName,lastName, email, password, confirmPassword, role, nationality } = this.state;
     console.log(uid, firstName, middleName,lastName, email, password, confirmPassword, role, nationality);
-    fetch("http://127.0.0.1:3010/SignUp", {
+    fetch(`${url}/SignUp`, {
       method: "POST",
       crossDomain: true,
       headers: {

@@ -10,7 +10,7 @@ export default class auth extends Component() {
     }
   }
   authProvider(e) {
-    fetch("http://127.0.0.1:3010/SignUp", {
+    fetch(`${url}/SignUp`, {
     method: "POST",
     crossDomain: true,
     headers: {

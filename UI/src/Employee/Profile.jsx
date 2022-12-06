@@ -9,7 +9,7 @@ export default class ProfileName extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://127.0.0.1:3010/userData", {
+    fetch(`${url}/userData`, {
       method: "POST",
       crossDomain: true,
       headers: {

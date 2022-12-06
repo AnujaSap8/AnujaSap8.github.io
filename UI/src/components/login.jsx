@@ -66,7 +66,7 @@ export default function Login() {
               async (e) => {
                 e.preventDefault()
                 console.log("Clicked")
-                fetch(`http://127.0.0.1:3010/SignIn`, {
+                fetch(`${url}/SignIn`, {
                   headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'

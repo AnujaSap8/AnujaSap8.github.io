@@ -7,6 +7,7 @@ import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/esm/Table";
 import Container from "react-bootstrap/esm/Container";
+import url from "../url";
 
 export default class DeanActionItem extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ export default class DeanActionItem extends Component {
   }
 
   componentDidMount() {
-    fetch("http://127.0.0.1:3010/specificApplication", {
+    fetch(`${url}/specificApplication`, {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -177,7 +178,7 @@ export default class DeanActionItem extends Component {
                       "role_id:: " +
                         parseInt(window.localStorage.getItem("role_id"))
                     );
-                    fetch(`http://127.0.0.1:3010/updateAppliStatusDean`, {
+                    fetch(`${url}/updateAppliStatusDean`, {
                       headers: {
                         "Content-Type": "application/json",
                         Accept: "application/json",
