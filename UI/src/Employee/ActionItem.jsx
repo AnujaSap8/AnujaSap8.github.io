@@ -5,6 +5,7 @@ import NewHead from "./EmpHead";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
+import url from "../url";
 
 export default class ActionItem extends Component {
   constructor(props) {

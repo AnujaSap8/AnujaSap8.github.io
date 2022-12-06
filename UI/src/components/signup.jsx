@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import url from "../url";
 
 export default class SignUp extends Component {
   constructor(props) {
