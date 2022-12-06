@@ -1,7 +1,7 @@
 import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom'
 
 import Login from './components/login'
 import SignUp from './components/signup'
@@ -42,6 +42,7 @@ function App() {
 
         <div className="auth-wrapper">
           <div className="auth-inner">
+            <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
@@ -56,6 +57,7 @@ function App() {
               <Route path="/DeanDash" element={<DeanDash />} />
               <Route path="/DeanActionItem" element={<DeanActionItem />} />
             </Routes>
+            </BrowserRouter>
           </div>
         </div>
     </Router>
