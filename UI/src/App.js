@@ -42,7 +42,7 @@ function App() {
 
         <div className="auth-wrapper">
           <div className="auth-inner">
-            <BrowserRouter>
+            <BrowserRouter basename='/'>
             <Routes>
               <Route exact path="/" element={<Login />} />
               <Route path="/sign-in" element={<Login />} />
