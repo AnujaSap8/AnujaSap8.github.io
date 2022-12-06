@@ -89,12 +89,12 @@ export default function Login() {
                     window.location.href = "/sign-in"
                   }
 
-                  else if (resp.data.role_id == 0) {
+                  else if (resp.data.role_id === 0) {
                     console.log("Role Id of student")
                     window.location.href = "/userDashboard"
 
                   }
-                  else if (resp.data.role_id == 3) {
+                  else if (resp.data.role_id === 3) {
                     console.log("Role Id of student")
                     window.location.href = "/DeanDash"
 
@@ -111,9 +111,6 @@ export default function Login() {
             Submit
           </button>
         </div>
-        <p className="forgot-password text-right">
-          <a href="#">Forgot password?</a>
-        </p>
         <p className="forgot-password text-right">
           <a href="/sign-up"> New User</a>
         </p>

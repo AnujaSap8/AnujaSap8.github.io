@@ -6,6 +6,7 @@ export default class ProfileName extends Component {
     super(props);
     this.state = {
       userData: "",
+      
     };
   }
   componentDidMount() {
